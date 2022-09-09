@@ -1,5 +1,26 @@
 # Changelog
 
+## 9.6.1
+
+- Upgrade Home Assistant CLI to 4.21.0
+
+## 9.6.0
+
+**Breaking change**: RSA keys generated using the SHA-1 hash algorithm
+were disabled by OpenSSH due to a security vulnerability. If you find
+your RSA key does not work after update you will need to make a new key
+with a stronger algoritm or switch to an ECDSA or Ed25519 type key. For
+more information see [OpenSSH v8.8 release notes](https://www.openssh.com/releasenotes.html).
+
+- Upgrade Home Assistant CLI to 4.18.0
+- Upgrade to Alpine 3.16
+- Refactor out usage of fix-attrs for s6 v3
+
+## 9.4.0
+
+- Upgrade Home Assistant CLI to 4.17.0
+- Enabled image signature
+
 ## 9.3.0
 
 - Update libwebsockets to 4.2.1
@@ -79,7 +100,6 @@
 - Update Home Assistant CLI to 4.4.0
 - Upgrade Alpine Linux to 3.12
 
-
 ## 8.6.0
 
 - Add support for local TCP forwarding
@@ -137,4 +157,3 @@
 - Improve Hass.io API token handling
 - Persist .ssh folder across restarts
 - Add helper symlink folders to user home folder
-

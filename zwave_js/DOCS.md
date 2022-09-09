@@ -4,7 +4,7 @@
 
 Follow these steps to get the add-on installed on your system:
 
-1. Navigate in your Home Assistant frontend to **Supervisor** -> **Add-on Store**.
+1. Navigate in your Home Assistant frontend to **Settings** -> **Add-ons** -> **Add-on Store**.
 2. Find the "Z-Wave JS" add-on and click it.
 3. Click on the "INSTALL" button.
 
@@ -13,10 +13,10 @@ Follow these steps to get the add-on installed on your system:
 The add-on needs to know where your Z-Wave stick can be found, and therefore,
 you'll need to configure the add-on to point to the right device.
 
-If you're using Home Assistant you may find the correct value for this on the
-`Supervisor -> System -> Host system -> Hardware` page. It is recommended
-to use a "by-id" path to the device if one exists, as it is not subject to
-change if other devices are added to the system.
+If you're using Home Assistant you may find the correct value for this by going to
+`Settings -> System -> Hardware` and then clicking the three dots menu and selecting
+`All Hardware`. It is recommended to use a "by-id" path to the device if one exists,
+as it is not subject to change if other devices are added to the system.
 
 1. Replace `null` in the `device` option in the add-on configuration and specify
    the device name in quotes: e.g., something like
@@ -26,13 +26,12 @@ change if other devices are added to the system.
    in order to connect securely to compatible devices. It is recommended
    that all four network keys are configured as some security enabled devices (locks, etc)
    may not function correctly if they are not added securely.
-     * As a note, it is not recommended to securely connect *all* devices unless they support S2 security
-       as the S0 security triples the amount of messages sent on the mesh.
+   - As a note, it is not recommended to securely connect _all_ devices unless they support S2 security
+     as the S0 security triples the amount of messages sent on the mesh.
 3. Click on "SAVE" to save the add-on configuration.
 4. Start the add-on.
 5. Add the Z-Wave JS integration to Home Assistant, see documentation:
    <https://www.home-assistant.io/integrations/zwave_js>
-
 
 ## Configuration
 
@@ -48,12 +47,13 @@ s2_unauthenticated_key: CF338FE0CB99549F7C0EA96308E5A403
 
 ### Option `device`
 
-The device address of your Z-Wave controller.
+The Z-Wave controller device.
 
-If you're using Home Assistant you may find the correct value for this on the
-`Supervisor -> System -> Host system -> Hardware` page. It is recommended
-to use a "by-id" path to the device if one exists, as it is not subject to
-change if other devices are added to the system.
+If you're using Home Assistant you may find the correct value for this by going to
+`Settings -> System -> Hardware` and then clicking the three dots menu and
+selecting `All Hardware`. It is recommended to use a "by-id" path to the device
+if one exists, as it is not subject to change if other devices are added to
+the system.
 
 In most cases this looks like one of the following:
 
@@ -126,6 +126,7 @@ automatically on startup.
 ### Option `log_level` (optional)
 
 This option sets the log level of Z-Wave JS. Valid options are:
+
 - silly
 - debug
 - verbose

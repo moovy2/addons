@@ -1,3 +1,5 @@
+---
+# yamllint disable rule:line-length
 name: Bug Report Form
 description: Report an issue related to one of the official add-ons.
 body:
@@ -28,7 +30,7 @@ body:
     attributes:
       label: What type of installation are you running?
       description: >
-        If you don't know, you can find it in: [Configuration panel -> Info](https://my.home-assistant.io/redirect/info/).
+        If you don't know, you can find it in: [Settings panel -> System -> System health](https://my.home-assistant.io/redirect/system_health/).
       options:
         - Home Assistant OS
         - Home Assistant Supervised
@@ -103,7 +105,7 @@ body:
     attributes:
       label: Anything in the Supervisor logs that might be useful for us?
       description: >
-        The Supervisor logs can be found in the [Supervisor panel -> System tab](https://my.home-assistant.io/redirect/supervisor_info/).
+        The Supervisor logs can be found in the [Settings panel -> System -> Logs -> Supervisor](https://my.home-assistant.io/redirect/logs/).
       render: txt
 
   - type: textarea
